@@ -1,0 +1,22 @@
+package com.mycompany.atividadegrasp;
+
+/**
+ * classe que representa um item do cardápio do restaurante.
+ */
+public class ItemCardapio {
+    private final String nome;
+    private final double preco;
+
+    public ItemCardapio(String nome, double preco) {
+        this.nome = nome;
+        this.preco = preco;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getPreco() {
+        return preco;
+    }
+}
