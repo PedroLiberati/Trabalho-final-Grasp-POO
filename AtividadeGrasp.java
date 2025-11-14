@@ -1,23 +1,27 @@
 package com.mycompany.atividadegrasp;
 
-/**
- * classe principal do sistema
- * ele mostra o uso dos padrões grasp: Creator e Controller.
+/*
+ * Classe principal do sistema.
+ *
+ * Aqui temos o uso de dois padrões GRASP:
+ *
+ * - Controller: a classe PedidoController é usada como ponto central de
+ *   coordenação das operações do sistema, recebendo solicitações do main.
+ *
+ * - Creator: o próprio Pedido será responsável por criar os objetos ItemPedido,
+ *   pois é ele quem possui as informações necessárias para essa criação. 
  */
 public class AtividadeGrasp {
     public static void main(String[] args) {
-        // Criando alguns itens do cardápio
+
         ItemCardapio pizza = new ItemCardapio("Pizza", 45.0);
         ItemCardapio refrigerante = new ItemCardapio("Refrigerante", 8.0);
 
-        // Criando o controlador (Controller)
         PedidoController controller = new PedidoController();
 
-        // Adicionando itens ao pedido via controlador
         controller.adicionarItemAoPedido(pizza, 2);
         controller.adicionarItemAoPedido(refrigerante, 3);
 
-        // Finalizando o pedido
         controller.finalizarPedido();
     }
 }
