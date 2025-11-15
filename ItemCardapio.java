@@ -1,7 +1,10 @@
 package com.mycompany.atividadegrasp;
 
 /**
- * classe que representa um item do cardápio do restaurante.
+ * Classe que representa um item do cardápio do restaurante.
+ *
+ * Esta classe faz parte da entidade de domínio, mas aqui não se aplica
+ * diretamente nenhum padrão GRASP. Ela serve como estrutura de dados simples.
  */
 public class ItemCardapio {
     private final String nome;
