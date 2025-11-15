@@ -1,7 +1,11 @@
 package com.mycompany.atividadegrasp;
 
 /**
- * classe que representa um item dentro de um pedido.
+ * Classe que representa um item dentro de um pedido.
+ *
+ * Aqui também não há aplicação direta de um padrão GRASP.
+ * Ela faz parte das entidades de negócio e funciona como
+ * "objeto parte" dentro de um Pedido.
  */
 public class ItemPedido {
     private ItemCardapio itemCardapio;
