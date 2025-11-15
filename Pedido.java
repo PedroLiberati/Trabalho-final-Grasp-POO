@@ -5,18 +5,23 @@ import java.util.List;
 
 /**
  * Classe que representa um pedido feito no restaurante.
- * 
- * Padrão grasp aplicado no creator
- * - a classe Pedido vai ser responsável por criar instâncias de ItemPedido,
- *   pois ela "contem" esses objetos e possui as informações necessárias
- *   para criar (item e quantidade).
+ *
+ * aqui entra o padrão GRASP "Creator":
+ * A classe "Pedido" é responsável por criar instâncias de "ItemPedido" porque:
+ *
+ * 1. Ela agrega vários "ItemPedido".
+ * 2. Ela possui os dados necessários para criar esses itens: ItemCardapio e quantidade.
+ * 3. O princípio Creator recomenda que uma classe que contém ou usa
+ *    fortemente outra classe deve ser a responsável por criá-la.
+ *
+ * Isso reduz o acoplamento e mantém a responsabilidade no lugar natural
+ * do domínio.
  */
 public class Pedido {
     private List<ItemPedido> itens = new ArrayList<>();
 
     public void adicionarItem(ItemCardapio item, int quantidade) {
-        // Aplicação do padrão creator: pedido cria seus próprios itens.
-        ItemPedido novoItem = new ItemPedido(item, quantidade);
+        ItemPedido novoItem = new ItemPedido(item, quantidade); 
         itens.add(novoItem);
     }
 
